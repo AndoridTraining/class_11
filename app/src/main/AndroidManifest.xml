@@ -11,12 +11,15 @@
         android:theme="@style/Theme.SampleProject">
         <activity
             android:name=".DashboardActivity"
-            android:exported="false" />
+            android:exported="true">
+        </activity>
         <activity
             android:name=".RegistrationActivity"
-            android:exported="false" />
+            android:exported="true">
+        </activity>
+
         <activity
-            android:name=".loginActivity"
+            android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
