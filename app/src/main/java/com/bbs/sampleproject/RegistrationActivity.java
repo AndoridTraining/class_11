@@ -40,9 +40,9 @@ public class RegistrationActivity extends AppCompatActivity {
     private void saveAtRoomDB(){
         AppDao appDao = db.appDao();
         AppEntity appEntity = new AppEntity(
-                "BBS11",
-                "bbs123",
-                0167300000);
+                name_et.getText().toString().trim(),
+                password_et.getText().toString().trim(),
+                phone_et.getText().toString().trim());
 
         AsyncTask.execute(()->
                 appDao.insertAll(appEntity)
@@ -59,6 +59,8 @@ public class RegistrationActivity extends AppCompatActivity {
         reg_bt = findViewById(R.id.reg_bt);
 
         db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, "appDatabase").build();
+                AppDatabase.class, "appDatabase")
+                .fallbackToDestructiveMigration()
+                .build();
     }
 }

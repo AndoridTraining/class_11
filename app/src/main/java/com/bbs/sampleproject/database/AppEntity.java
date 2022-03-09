@@ -18,7 +18,7 @@ public class AppEntity {
     public String user_password;
 
     @ColumnInfo(name = "user_phone")
-    public int user_phone;
+    public String user_phone;
 
     @ColumnInfo(name = "user_email")
     public String user_email;
@@ -32,7 +32,7 @@ public class AppEntity {
     public AppEntity(
             @NonNull String user_name,
             @NonNull String user_password,
-            @NonNull int user_phone){
+            @NonNull String user_phone){
         this.user_name = user_name;
         this.user_password = user_password;
         this.user_phone = user_phone;

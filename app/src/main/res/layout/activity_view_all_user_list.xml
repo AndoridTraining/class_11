@@ -5,16 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="50dp"
-    tools:context=".DashboardActivity">
+    tools:context=".ViewAllUserListActivity">
 
-    <Button
-        android:id="@+id/go_to_view_user"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/user_list_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="View All User"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
-
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
